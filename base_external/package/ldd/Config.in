@@ -1,0 +1,8 @@
+
+config MAKE_SUBDIRS := y
+config MODULE_SUBDIRS := "misc-modules scull"
+config BR2_PACKAGE_LDD
+	bool "ldd"
+	help
+	  Includes the misc-modules and scull in image
+	  Used to understand buildroot external trees and package builds.
