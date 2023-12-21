@@ -23,13 +23,13 @@ LDD_MODULE_SUBDIRS += scull
 
 # 
 define LDD_INSTALL_TARGET_CMDS
-	$(INSTALL) -d $(TARGET_DIR)/etc/assign7
-	$(INSTALL) -d 0755 $(@D)/misc-modules/*.ko $(TARGET_DIR)/etc/assign7
-	$(INSTALL) -d 0755 $(@D)/misc-modules/module_load $(TARGET_DIR)/etc/assign7
-	$(INSTALL) -d 0755 $(@D)/misc-modules/module_unload $(TARGET_DIR)/etc/assign7
+	$(INSTALL) -v -m 0766 -d $(TARGET_DIR)/etc/assign7
+	$(INSTALL) -m 0755 $(@D)/misc-modules/*.ko $(TARGET_DIR)/etc/assign7
+	$(INSTALL) -m 0755 $(@D)/misc-modules/module_load $(TARGET_DIR)/etc/assign7
+	$(INSTALL) -m 0755 $(@D)/misc-modules/module_unload $(TARGET_DIR)/etc/assign7
 	$(INSTALL) -m 0755 $(@D)/scull/*.ko $(TARGET_DIR)/etc/assign7
-	$(INSTALL) -d 0755 $(@D)/scull/scull_load $(TARGET_DIR)/etc/assign7
-	$(INSTALL) -d 0755 $(@D)/scull/scull_unload $(TARGET_DIR)/etc/assign7
+	$(INSTALL) -m 0755 $(@D)/scull/scull_load $(TARGET_DIR)/etc/assign7
+	$(INSTALL) -m 0755 $(@D)/scull/scull_unload $(TARGET_DIR)/etc/assign7
 	$(INSTALL) -m 0755 $(@D)/initscript/ldd-start-stop $(TARGET_DIR)/etc/init.d/S98lddmodules
 endef
 
