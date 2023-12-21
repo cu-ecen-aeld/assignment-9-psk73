@@ -23,6 +23,7 @@ LDD_MODULE_SUBDIRS += scull
 
 # 
 define LDD_INSTALL_TARGET_CMDS
+	$(INSTALL) -d $(TARGET_DIR)/etc/assign7
 	$(INSTALL) -d 0755 $(@D)/misc-modules/*.ko $(TARGET_DIR)/etc/assign7
 	$(INSTALL) -d 0755 $(@D)/misc-modules/module_load $(TARGET_DIR)/etc/assign7
 	$(INSTALL) -d 0755 $(@D)/misc-modules/module_unload $(TARGET_DIR)/etc/assign7
