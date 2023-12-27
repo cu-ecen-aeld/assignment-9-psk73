@@ -19,7 +19,7 @@ define AESD_ASSIGNMENTS_BUILD_CMDS
 	$(MAKE) $(TARGET_CONFIGURE_OPTS) -C $(@D)/server all
 endef
 
-LDD_MODULE_SUBDIRS = aesd-char-driver
+AESD_ASSIGNMENTS_MODULE_SUBDIRS = aesd-char-driver
 
 # TODO add your writer, finder and finder-test utilities/scripts to the installation steps below
 define AESD_ASSIGNMENTS_INSTALL_TARGET_CMDS
